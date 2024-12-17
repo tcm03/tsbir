@@ -1,2 +1,9 @@
+torch
+torchvision
+transformers
+Pillow
+tqdm
+numpy
 ftfy
+regex
 huggingface_hub
