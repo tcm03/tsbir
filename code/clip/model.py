@@ -7,6 +7,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 from torch import nn
+from huggingface_hub import PyTorchModelHubMixin
 
 
 class Bottleneck(nn.Module):
@@ -237,7 +238,7 @@ class VisualTransformer(nn.Module):
 
         return x
 
-class CLIP(nn.Module):
+class CLIP(nn.Module, PyTorchModelHubMixin):
     def __init__(self,
                  embed_dim: int,
                  # vision
